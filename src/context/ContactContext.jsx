@@ -28,7 +28,7 @@ const defaultLinks = [
   {
     id: '4',
     name: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/kpfarm22?igsh=dnY5dDd2eGViZG9q&utm_source=qr',
     iconName: 'FaInstagram',
     color: 'from-pink-500 via-red-500 to-yellow-500',
     hoverColor: 'hover:shadow-pink-500/30 hover:border-pink-200',
