@@ -4,7 +4,7 @@ const defaultLinks = [
   {
     id: '1',
     name: 'Call Us',
-    href: 'tel:0770271515',
+    href: 'tel:+94770271515',
     iconName: 'FaPhone',
     color: 'from-emerald-500 to-teal-500',
     hoverColor: 'hover:shadow-teal-500/30 hover:border-teal-200',
@@ -12,7 +12,7 @@ const defaultLinks = [
   {
     id: '2',
     name: 'WhatsApp',
-    href: 'https://wa.me/0770271515',
+    href: 'https://wa.me/94770271515',
     iconName: 'FaWhatsapp',
     color: 'from-green-500 to-emerald-600',
     hoverColor: 'hover:shadow-green-500/30 hover:border-green-200',

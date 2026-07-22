@@ -142,10 +142,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-neutral-200 text-center text-neutral-500 text-sm bg-white">
-        <p>&copy; {new Date().getFullYear()} KP Condect Farm. All rights reserved.</p>
-      </footer>
+
     </div>
   );
 }
