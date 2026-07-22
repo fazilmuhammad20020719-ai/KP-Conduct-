@@ -59,9 +59,11 @@ export function ContactProvider({ children }) {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Automatically fix the cache if it has the old broken number
-        const hasOldNumber = parsed.some(link => link.href && link.href.includes('wa.me/0770271515'));
-        if (hasOldNumber) {
+        // Automatically fix the cache if it has the old broken number or old instagram link
+        const hasStaleData = parsed.some(link => 
+          link.href && (link.href.includes('wa.me/0770271515') || link.href.includes('kpfarm22'))
+        );
+        if (hasStaleData) {
           return defaultLinks;
         }
         return parsed;
