@@ -56,7 +56,20 @@ const ContactContext = createContext();
 export function ContactProvider({ children }) {
   const [links, setLinks] = useState(() => {
     const saved = localStorage.getItem('contactLinks');
-    return saved ? JSON.parse(saved) : defaultLinks;
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        // Automatically fix the cache if it has the old broken number
+        const hasOldNumber = parsed.some(link => link.href && link.href.includes('wa.me/0770271515'));
+        if (hasOldNumber) {
+          return defaultLinks;
+        }
+        return parsed;
+      } catch (e) {
+        return defaultLinks;
+      }
+    }
+    return defaultLinks;
   });
 
   useEffect(() => {
