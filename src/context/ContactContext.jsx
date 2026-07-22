@@ -36,7 +36,7 @@ const defaultLinks = [
   {
     id: '5',
     name: 'YouTube',
-    href: 'https://youtube.com',
+    href: 'https://youtube.com/@kpfarm23?si=OX1d1Q_yea_UYD3G',
     iconName: 'FaYoutube',
     color: 'from-red-600 to-red-700',
     hoverColor: 'hover:shadow-red-500/30 hover:border-red-200',
@@ -59,9 +59,9 @@ export function ContactProvider({ children }) {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Automatically fix the cache if it has the old broken number or old instagram link
+        // Automatically fix the cache if it has the old broken number, old instagram link, or old youtube link
         const hasStaleData = parsed.some(link => 
-          link.href && (link.href.includes('wa.me/0770271515') || link.href.includes('kpfarm22'))
+          link.href && (link.href.includes('wa.me/0770271515') || link.href.includes('kpfarm22') || link.href === 'https://youtube.com')
         );
         if (hasStaleData) {
           return defaultLinks;
