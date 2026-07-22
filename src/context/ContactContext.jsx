@@ -28,7 +28,7 @@ const defaultLinks = [
   {
     id: '4',
     name: 'Instagram',
-    href: 'https://www.instagram.com/kpfarm23?igsh=dnY5dDd2eGViZG9q&utm_source=qr',
+    href: 'https://www.instagram.com/kpfarm23/',
     iconName: 'FaInstagram',
     color: 'from-pink-500 via-red-500 to-yellow-500',
     hoverColor: 'hover:shadow-pink-500/30 hover:border-pink-200',
@@ -61,7 +61,7 @@ export function ContactProvider({ children }) {
         const parsed = JSON.parse(saved);
         // Automatically fix the cache if it has the old broken number, old instagram link, or old youtube link
         const hasStaleData = parsed.some(link => 
-          link.href && (link.href.includes('wa.me/0770271515') || link.href.includes('kpfarm22') || link.href === 'https://youtube.com')
+          link.href && (link.href.includes('wa.me/0770271515') || link.href.includes('kpfarm22') || link.href.includes('utm_source=qr') || link.href === 'https://youtube.com')
         );
         if (hasStaleData) {
           return defaultLinks;
